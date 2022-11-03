@@ -65,7 +65,7 @@ header {
 }
 
 #search {
-  height: 4.8rem;
+  height: 4.6rem;
   width: 46.2rem;
   padding: 1.6rem;
   background-color: var(--primary-color);
@@ -75,11 +75,12 @@ header {
 }
 
 #search:focus {
-  outline: 2px solid hsla(191, 31%, 42%, 1) ;
+  outline: 1px solid hsla(191, 31%, 42%, 1) ;
 }
 
 #favorite {
   width: 17rem;
+  height: 4.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,75 +105,142 @@ header {
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  color: #E1E1E6;
+  height: 6.4rem; /*mexer a autura da table*/
+  display:block;
 }
 
-thead th {  
+thead {
+  display: inline-block;
+  width: 100%;
+
+  background-color: hsla(194, 72%, 13%, 1);
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+
   font-weight: 700;
   font-size: 2rem;
   line-height: 3.2rem;
+  color: #E1E1E6;
 
-  padding: 1.6rem 4rem;
-  text-align: left;
-  background-color: hsla(194, 72%, 13%, 1);
-}
+  border-right: 1px solid hsla(191, 31%, 42%, 1);
+  border-top: 1px solid hsla(191, 31%, 42%, 1);
+  border-left: 1px solid hsla(191, 31%, 42%, 1);
 
-thead th:first-child {
   border-top-left-radius: 1.2rem;
-}
-
-thead th:last-child {
   border-top-right-radius: 1.2rem;
 }
 
-tbody {
-  overflow-y: auto;
+thead tr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  height: 6.4rem;
 }
 
-tbody tr{
-  background-color: hsla(195, 61%, 6%, 0.5);
+thead tr>th,
+tbody tr>td  {
+  flex: 1;
+}
+
+thead tr>th:first-child,
+tbody tr>td:first-child {
+  flex: 2;
+}
+
+thead th,
+tbody td {
+  padding-left: 4rem;
+}
+
+tbody {
+  max-height: 47.7rem ;  
+  display: inline-block;
+  width: 100%;
+  overflow: auto;
+
+  background: rgba(6, 22, 27, 0.5);
+  
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  
+  color: #E1E1E6;
+
+  border-right: 1px solid hsla(191, 31%, 42%, 1);
+  
+  border-left: 1px solid hsla(191, 31%, 42%, 1);
+
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  
+}
+
+tbody tr {
+  width: 100%;
+  height: 10.4rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 tbody tr:nth-child(even) {
-  background: hsla(192, 65%, 7%, 1);
-  outline: 1px solid hsla(191, 31%, 42%, 1);
+  background-color: hsla(192, 65%, 7%, 1);
+  border-top:  1px solid hsla(191, 31%, 42%, 1);
+  border-bottom:  1px solid hsla(191, 31%, 42%, 1);
+  
+
 }
 
-tbody tr:last-child td:first-child {
+tbody tr:last-child {
+  border-bottom: 1px solid hsla(191, 31%, 42%, 1);
   border-bottom-left-radius: 1.2rem;
-}
-
-tbody tr:last-child td:last-child {
   border-bottom-right-radius: 1.2rem;
-} 
-
-tbody td {
-  padding: 2.8rem 4rem;
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 tbody .user {
   display: flex;
-  align-items: center;
   gap: 1.6rem;
 }
 
 tbody .user img {
-  width: 5.6rem;
   height: 5.6rem;
   border-radius: 50%;
 }
 
 tbody .user p {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.2rem;
   color: #E1E1E6;
 }
 
-tbody .user span {
+tbody .user span{
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
   color: #E1E1E6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+   
+
+}
+
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px rgb(233, 231, 231); */
+  border-radius: 10px;
+
+  margin-top: .8rem;
+  margin-right: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A808C;
+  width: 3px;
+  border-radius: 10px;
 }
 
 .remove {
@@ -195,9 +263,12 @@ tbody .user span {
   justify-content: center;
   align-items: center;
   gap: 6rem;
-}
 
-.table {
-  border-radius: 1.2rem;  
-  outline: 1px solid hsla(195, 91%, 25%, 1);
+  border-right: 1px solid hsla(191, 31%, 42%, 1);
+  border-bottom: 1px solid hsla(191, 31%, 42%, 1);
+  border-left: 1px solid hsla(191, 31%, 42%, 1);
+
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  
 }
